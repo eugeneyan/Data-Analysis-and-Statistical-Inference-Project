@@ -1,6 +1,7 @@
 #load data from URL
 load(url("http://bit.ly/dasi_gss_data"))
 View(gss)
+str(gss)
 
 #thesis topic
 #1. how does education affect current income?  
@@ -35,4 +36,31 @@ prop.table (fam_income)
 model <- lm(gss$coninc ~ gss$degree)
 summary(model)
 plot(gss$coninc ~ gss$degree, xlab = "education level", ylab = "total family income")
+anova(model)
+plot(gss$coninc ~ gss$degree)
+
+#create individual years
+gss2012 <- subset(gss, year == 2012, select = c(caseid, year, age, sex, educ, degree, coninc, incom16))
+gss2002 <- subset(gss, year == 2002, select = c(caseid, year, age, sex, educ, degree, coninc, incom16))
+gss1993 <- subset(gss, year == 1993, select = c(caseid, year, age, sex, educ, degree, coninc, incom16))
+gss1982 <- subset(gss, year == 1982, select = c(caseid, year, age, sex, educ, degree, coninc, incom16))
+
+#create z-scores
+conincz <- scale (gss1982$coninc)
+gss2012 <- cbind(gss2012, conincz)
+gss2002 <- cbind(gss2002, conincz)
+gss1993 <- cbind(gss1993, conincz)
+gss1982 <- cbind(gss1982, conincz)
+
+#plots of income ~ education over the years
+par(mfrow = c(2,2))
+plot(gss2012$conincz ~ gss2012$degree, main = "2012", xlab = "education level", ylab = "total family income", ylim = c(-1.5,3))
+plot(gss2002$conincz ~ gss2002$degree, main = "2002", xlab = "education level", ylab = "total family income", ylim = c(-1.5,3))
+plot(gss1993$conincz ~ gss1993$degree, main = "1993", xlab = "education level", ylab = "total family income", ylim = c(-1.5,3))
+plot(gss1982$conincz ~ gss1982$degree, main = "1982", xlab = "education level", ylab = "total family income", ylim = c(-1.5,3))
+
+#exploratory analysis for 2012
+model <- lm(gss2012$conincz ~ gss2012$degree)
+summary(model)
+plot(gss2012$conincz ~ gss2012$degree, xlab = "education level", ylab = "total family income")
 anova(model)
