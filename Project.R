@@ -116,6 +116,9 @@ prop.table(table1)
 chisq.test(table1)
 
 #plot education level ~ income at 16
-par(mfrow = c(1,1))
+par(mfrow = c(2,2))
 plot(gss2012$degree, gss2012$incom16)
 plot(gss2012$incom16, gss2012$degree)
+plot(gss2002$incom16, gss2002$degree)
+plot(gss1993$incom16, gss1993$degree)
+plot(gss1982$incom16, gss1982$degree)
