@@ -59,6 +59,13 @@ plot(gss2002$conincz ~ gss2002$degree, main = "2002", xlab = "education level", 
 plot(gss1993$conincz ~ gss1993$degree, main = "1993", xlab = "education level", ylab = "total family income", ylim = c(-1.5,3))
 plot(gss1982$conincz ~ gss1982$degree, main = "1982", xlab = "education level", ylab = "total family income", ylim = c(-1.5,3))
 
+#plots of income ~ family income at 16
+par(mfrow = c(2,2))
+plot(gss2012$conincz ~ gss2012$incom16, main = "2012", xlab = "education level", ylab = "family income at 16", ylim = c(-1.5,3))
+plot(gss2002$conincz ~ gss2002$incom16, main = "2002", xlab = "education level", ylab = "family income at 16", ylim = c(-1.5,3))
+plot(gss1993$conincz ~ gss1993$incom16, main = "1993", xlab = "education level", ylab = "family income at 16", ylim = c(-1.5,3))
+plot(gss1982$conincz ~ gss1982$incom16, main = "1982", xlab = "education level", ylab = "family income at 16", ylim = c(-1.5,3))
+
 #degree over time
 plot(gss2012$degree, main = "2012")
 plot(gss2002$degree, main = "2002")
