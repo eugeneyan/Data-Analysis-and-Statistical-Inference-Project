@@ -110,6 +110,12 @@ plot(gss2012$conincz ~ gss2012$degree + gss2012$incom16, xlab = "education level
 anova(model6)
 
 #chi-square of education level ~ family income at age 16
-table1 <- prop.table(gss$degree, gss$incom16)
+table1 <- table(gss2012$degree, gss2012$incom16)
+table1
 prop.table(table1)
 chisq.test(table1)
+
+#plot education level ~ income at 16
+par(mfrow = c(1,1))
+plot(gss2012$degree, gss2012$incom16)
+plot(gss2012$incom16, gss2012$degree)
