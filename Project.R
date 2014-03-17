@@ -97,8 +97,19 @@ summary(model4)
 plot(gss2012$conincz ~ gss2012$degree + gss2012$educ, xlab = "education level", ylab = "total family income")
 anova(model4)
 
-#income ~ education level + income at age 14
+#income ~ education level + income at age 16
 model5 <- lm(gss2012$conincz ~ gss2012$degree + gss2012$incom16)
 summary(model5)
 plot(gss2012$conincz ~ gss2012$degree + gss2012$incom16, xlab = "education level", ylab = "total family income")
 anova(model5)
+
+#education level ~ income at age 16
+model6 <- lm(gss2012$degree ~ gss2012$incom16)
+summary(model6)
+plot(gss2012$conincz ~ gss2012$degree + gss2012$incom16, xlab = "education level", ylab = "total family income")
+anova(model6)
+
+#chi-square of education level ~ family income at age 16
+table1 <- prop.table(gss$degree, gss$incom16)
+prop.table(table1)
+chisq.test(table1)
