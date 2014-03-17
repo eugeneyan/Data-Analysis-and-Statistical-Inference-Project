@@ -59,14 +59,39 @@ plot(gss2002$conincz ~ gss2002$degree, main = "2002", xlab = "education level", 
 plot(gss1993$conincz ~ gss1993$degree, main = "1993", xlab = "education level", ylab = "total family income", ylim = c(-1.5,3))
 plot(gss1982$conincz ~ gss1982$degree, main = "1982", xlab = "education level", ylab = "total family income", ylim = c(-1.5,3))
 
-#exploratory analysis for 2012
-model <- lm(gss2012$conincz ~ gss2012$degree)
-summary(model)
-plot(gss2012$conincz ~ gss2012$degree, xlab = "education level", ylab = "total family income")
-anova(model)
-
 #degree over time
 plot(gss2012$degree, main = "2012")
 plot(gss2002$degree, main = "2002")
 plot(gss1993$degree, main = "1993")
 plot(gss1982$degree, main = "1982")
+
+#exploratory analysis for 2012
+#income ~ education level
+model <- lm(gss2012$conincz ~ gss2012$degree)
+summary(model)
+plot(gss2012$conincz ~ gss2012$degree, xlab = "education level", ylab = "total family income")
+anova(model)
+
+#income ~ no. of years of education
+model2 <- lm(gss2012$conincz ~ gss2012$educ)
+summary(model2)
+plot(gss2012$conincz ~ gss2012$educ, xlab = "education years", ylab = "total family income")
+anova(model2)
+
+#income ~ income at age 16
+model3 <- lm(gss2012$conincz ~ gss2012$incom16)
+summary(model3)
+plot(gss2012$conincz ~ gss2012$incom16, xlab = "education years", ylab = "total family income")
+anova(model3)
+
+#income ~ education level + no. of years of education
+model4 <- lm(gss2012$conincz ~ gss2012$degree + gss2012$educ)
+summary(model4)
+plot(gss2012$conincz ~ gss2012$degree + gss2012$educ, xlab = "education level", ylab = "total family income")
+anova(model4)
+
+#income ~ education level + income at age 14
+model5 <- lm(gss2012$conincz ~ gss2012$degree + gss2012$incom16)
+summary(model5)
+plot(gss2012$conincz ~ gss2012$degree + gss2012$incom16, xlab = "education level", ylab = "total family income")
+anova(model5)
