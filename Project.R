@@ -64,3 +64,9 @@ model <- lm(gss2012$conincz ~ gss2012$degree)
 summary(model)
 plot(gss2012$conincz ~ gss2012$degree, xlab = "education level", ylab = "total family income")
 anova(model)
+
+#degree over time
+plot(gss2012$degree, main = "2012")
+plot(gss2002$degree, main = "2002")
+plot(gss1993$degree, main = "1993")
+plot(gss1982$degree, main = "1982")
