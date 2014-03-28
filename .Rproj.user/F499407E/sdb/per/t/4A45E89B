@@ -1,0 +1,17 @@
+{
+    "contents" : "#load data from URL\nload(url(\"http://bit.ly/dasi_gss_data\"))\nView(gss)\nstr(gss)\n\n#R markdown template\ndownload.file(url = \"http://bit.ly/dasi_project_template\", destfile = \"dasi_project_template.Rmd\")\n\n#inference function\nsource(\"http://bit.ly/dasi_inference\")\n#load libraries\nlibrary(psych)\nlibrary(lattice)\nlibrary(ggplot2)\n\n#thesis topic\n#1. how does education affect current income?  \n#2. how does family income at 16 affect education?\n#3. how does family income at 16 affect current income?\n#4. is there an interaction effect between education and family income at 16 on current income?\n\nboxplot(gss2012$coninc ~ gss2012$degree)\n\n#subset data for 2012\ngss2012 <- subset(gss, year == 2012, select = c(caseid, year, age, sex, educ, degree, coninc, incom16))\n\n#distribution of current income by education level\nLt_High <- subset(gss2012, degree == \"Lt High School\")\nHigh <- subset(gss2012, degree == \"High School\")\nJC <- subset(gss2012, degree == \"Junior College\")\nBach <- subset(gss2012, degree == \"Bachelor\")\nGrad <- subset(gss2012, degree == \"Graduate\")\n\npar(mfrow = c(5,1))\nhist(Lt_High$coninc)\nhist(High$coninc)\nhist(JC$coninc)\nhist(Bach$coninc)\nhist(Grad$coninc)\n\n#ggplot\nggplot(gss2012$coninc, aes(length, fill = gss2012$degree)) + geom_density(alpha = 0.2)\ngss2012i <- structure(c(gss2012$coninc, gss2012$degree), dim = c(1974,2), dimnames = list(c(\"coninc\"), c(\"degree\")))\n\n#anova of gss2012$coninc ~ gss2012$degree\ninference(y = gss2012$coninc, x = gss2012$degree, est = \"mean\", type = \"ht\", null = 0, alternative = \"greater\", method = \"theoretical\")\n\n#anova of gss2012$coninc ~ gss2012$incom16\ninference(y = gss2012$coninc, x = gss2012$incom16, est = \"mean\", type = \"ht\", null = 0, alternative = \"greater\", method = \"theoretical\")\n\n#regression models\n#current income ~ education level\nmodel1 <- lm(gss2012$coninc ~ gss2012$degree)\nsummary(model1)\n\n#current income ~ income at age of 16\nmodel2 <- lm(gss2012$coninc ~ gss2012$incom16)\nsummary(model2)\n\n#current income ~ education level + income at age of 16\nmodel3 <- lm(gss2012$coninc ~ gss2012$degree + gss2012$incom16)\nsummary(model3)\n",
+    "created" : 1396000279653.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "928927012",
+    "id" : "4A45E89B",
+    "lastKnownWriteTime" : 1396013771,
+    "path" : "~/Eugene's/Coursera/Data Analysis and Statistical Inference /Week 4/Project (actual).R",
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
