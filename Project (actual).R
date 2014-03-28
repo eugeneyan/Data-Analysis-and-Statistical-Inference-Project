@@ -60,3 +60,6 @@ summary(model2)
 #current income ~ education level + income at age of 16
 model3 <- lm(gss2012$coninc ~ gss2012$degree + gss2012$incom16)
 summary(model3)
+
+plot(model1)
+plot(gss2012$coninc ~ gss2012$degree)
