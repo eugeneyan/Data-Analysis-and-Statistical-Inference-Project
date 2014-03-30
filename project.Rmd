@@ -11,6 +11,7 @@ gss2012a <- subset(gss, year == 2012, select = c(caseid, year, age, sex, educ, d
 ?complete.cases
 gss2012 <- gss2012a[complete.cases(gss2012a), ]
 library(ggplot2)
+source("http://bit.ly/dasi_inference")
 ```
 
 <!-- In the remainder of the document, add R code chunks as needed -->
@@ -35,14 +36,14 @@ With regard to causality, the data cannot be used to establish causal links betw
 
 ### Exploratory data analysis:
 
-```{r, echo = FALSE}
+```{r, echo = FALSE, fig.width = 4, strip.white = FALSE}
 #degree
-table(gss2012$degree)
-prop.table(table(gss2012$degree))
+summary(gss2012$degree)
+prop.table(summary(gss2012$degree))
 ```
 From the table above, we observe that most of the US population have education level of high school and below, with approximately 28.5% having a Bachelor, Masters, and above.  
 
-```{r, echo = FALSE, fig.height = 3, fig.width = 10}
+```{r, echo = FALSE, fig.height = 5, fig.width = 10}
 #income
 summary(gss2012$coninc)
 g <- ggplot(gss2012, aes(coninc))
@@ -58,20 +59,23 @@ The box plot of income at different education levels suggests that there is a re
 
 ### Inference:
 
-
-The hypotheses for this study are as stated below: 
-Null Hypothesis: The mean income is the same across all levels of education.
+The hypotheses for this study are as stated below:   
+Null Hypothesis: The mean income is the same across all levels of education.   
 Alternative Hypothesis: At least one pair of mean incomes are different from each other.
 
 There are three conditions for ANOVA, namely (i) independence, (ii) approximate normality, and (iii) equal variance.  For (i), the data was randomly sampled with full probability sampling, with the sample size for education group being less than 10% of the population and independent of each other.  For (ii), while the normal probability plots for each of the groups below show that the data is right skewed and deviates from normality, this is mitigated by the large samples sizes for each education group.  For (iii), the box plot of income by education level shows that there is roughly constant variance for the High School, Junior College, and Bachelor groups, while the Less that High School group has lower variance while the Graduate group has higher variance.  To address this, a non-parametric test such as the Kruskal-Wallis test can be used; however, this is not covered under the class syllabus.  Thus, this study will proceed with the ANOVA analysis.
 
 Given that the means between more than two groups (i.e., five) will be compared, the method to be used in this study is the analysis of variance (“ANOVA”).  The ANOVA analysis will compare the means across the five groups and determine if the observed differences are attributed to between group variability (i.e., education) or within group variability (other factors).  
 
-```{r}
+```{r, fig.height = 4, fig.width = 10, warning = FALSE}
 #anova of gss2012$coninc ~ gss2012$degree
 inference(y = gss2012$coninc, x = gss2012$degree, est = "mean", type = "ht", null = 0, alternative = "greater", method = "theoretical")
 ```
+```{r, echo=FALSE}
+"Bonferroni Correction: Modified Significance Level = 0.5/((5*4)/2) = 0.005"
+```
 
+The p-value from the ANOVA is almost 0 (i.e., less than 2.2e-16).  Thus, we reject the null hypothesis, at the 5% significance level, and conclude that the data provides convincing evidence that at least one pair of income means are different from each other.  To examine which education levels different in mean incomes, we will examine the pairwise tests with a modified significance level is 0.5% (based on the Bonferroni correction).  At the 0.5% significance level, the p-values from the pairwise tests are all significant, except for the high school-junior college pair.  Thus, we conclude that the data provides convincing evidence that the mean income is different across all education pairs except for the high school-junior college pair.  The box plots of the high school and junior college levels also suggests this, given that the centres are close to each other.  There is no associated confidence interval for the ANOVA technique and thus there is nothing to compare the ANOVA results with. 
 
 ### Conclusion:
 

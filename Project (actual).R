@@ -3,7 +3,9 @@ load(url("http://bit.ly/dasi_gss_data"))
 View(gss)
 str(gss)
 summary(gss)
-
+install.packages("highlight")
+library(highlight)
+?highlight
 #subset data for 2012
 gss2012a <- subset(gss, year == 2012, select = c(caseid, year, age, sex, educ, degree, coninc, incom16))
 ?complete.cases
@@ -48,25 +50,21 @@ g <- ggplot(gss2012, aes(coninc, fill = degree))
 g + geom_density (alpha = 0.2) + labs(title = "Income Level distributions across Education Levels") + labs(x = "Total Family Income", y = "Frequency")
 
 #boxplot of income vs degree
+par(mfrow = c(1,1))
 boxplot(gss2012$coninc ~ gss2012$degree, xlab = "Education Level", ylab = "Total Family Income", main = "Boxplot of Total Family Income by Education Level")
 
-#distribution of current income by education level
-Lt_High <- subset(gss2012, degree == "Lt High School")
-High <- subset(gss2012, degree == "High School")
-JC <- subset(gss2012, degree == "Junior College")
-Bach <- subset(gss2012, degree == "Bachelor")
-Grad <- subset(gss2012, degree == "Graduate")
-
-par(mfrow = c(5,1))
-hist(Lt_High$coninc)
-hist(High$coninc)
-hist(JC$coninc)
-hist(Bach$coninc)
-hist(Grad$coninc)
-
-#ggplot
-ggplot(gss2012$coninc, aes(length, fill = gss2012$degree)) + geom_density(alpha = 0.2)
-gss2012i <- structure(c(gss2012$coninc, gss2012$degree), dim = c(1974,2), dimnames = list(c("coninc"), c("degree")))
+#conditions
+par(mfrow = c(1,5))
+qqnorm(gss2012$coninc[gss2012$degree == "Lt High School"], main = "Lt High School")
+qqline(gss2012$coninc[gss2012$degree == "Lt High School"])
+qqnorm(gss2012$coninc[gss2012$degree == "High School"], main = "High School")
+qqline(gss2012$coninc[gss2012$degree == "High School"])
+qqnorm(gss2012$coninc[gss2012$degree == "Junior College"], main = "Junior College")
+qqline(gss2012$coninc[gss2012$degree == "Junior College"])
+qqnorm(gss2012$coninc[gss2012$degree == "Bachelor"], main = "Bachelor")
+qqline(gss2012$coninc[gss2012$degree == "Bachelor"])
+qqnorm(gss2012$coninc[gss2012$degree == "Graduate"], main = "Graduate")
+qqline(gss2012$coninc[gss2012$degree == "Graduate"])
 
 #anova of gss2012$coninc ~ gss2012$degree
 inference(y = gss2012$coninc, x = gss2012$degree, est = "mean", type = "ht", null = 0, alternative = "greater", method = "theoretical")

@@ -32,13 +32,11 @@ With regard to causality, the data cannot be used to establish causal links betw
 
 
 ```
-## 
 ## Lt High School    High School Junior College       Bachelor       Graduate 
 ##            222            869            130            319            180
 ```
 
 ```
-## 
 ## Lt High School    High School Junior College       Bachelor       Graduate 
 ##        0.12907        0.50523        0.07558        0.18547        0.10465
 ```
@@ -61,9 +59,8 @@ The box plot of income at different education levels suggests that there is a re
 
 ### Inference:
 
-
-The hypotheses for this study are as stated below: 
-Null Hypothesis: The mean income is the same across all levels of education.
+The hypotheses for this study are as stated below:   
+Null Hypothesis: The mean income is the same across all levels of education.   
 Alternative Hypothesis: At least one pair of mean incomes are different from each other.
 
 There are three conditions for ANOVA, namely (i) independence, (ii) approximate normality, and (iii) equal variance.  For (i), the data was randomly sampled with full probability sampling, with the sample size for education group being less than 10% of the population and independent of each other.  For (ii), while the normal probability plots for each of the groups below show that the data is right skewed and deviates from normality, this is mitigated by the large samples sizes for each education group.  For (iii), the box plot of income by education level shows that there is roughly constant variance for the High School, Junior College, and Bachelor groups, while the Less that High School group has lower variance while the Graduate group has higher variance.  To address this, a non-parametric test such as the Kruskal-Wallis test can be used; however, this is not covered under the class syllabus.  Thus, this study will proceed with the ANOVA analysis.
@@ -78,10 +75,43 @@ inference(y = gss2012$coninc, x = gss2012$degree, est = "mean", type = "ht",
 ```
 
 ```
-## Error: could not find function "inference"
+## Response variable: numerical, Explanatory variable: categorical
+## ANOVA
+## Summary statistics:
+## n_Lt High School = 222, mean_Lt High School = 21657, sd_Lt High School = 22693
+## n_High School = 869, mean_High School = 37665, sd_High School = 35146
+## n_Junior College = 130, mean_Junior College = 46221, sd_Junior College = 39487
+## n_Bachelor = 319, mean_Bachelor = 75871, sd_Bachelor = 55549
+## n_Graduate = 180, mean_Graduate = 90371, sd_Graduate = 58309
+```
+
+```
+## H_0: All means are equal.
+## H_A: At least one mean is different.
+## Analysis of Variance Table
+## 
+## Response: y
+##             Df   Sum Sq  Mean Sq F value Pr(>F)
+## x            4 8.17e+11 2.04e+11     118 <2e-16
+## Residuals 1715 2.98e+12 1.74e+09               
+## 
+## Pairwise tests: t tests with pooled SD 
+##                Lt High School High School Junior College Bachelor
+## High School                 0          NA             NA       NA
+## Junior College              0      0.0291             NA       NA
+## Bachelor                    0      0.0000              0       NA
+## Graduate                    0      0.0000              0    2e-04
+```
+
+![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5.png) 
+
+
+```
+## [1] "Bonferroni Correction: Modified Significance Level = 0.5/((5*4)/2) = 0.005"
 ```
 
 
+The p-value from the ANOVA is almost 0 (i.e., less than 2.2e-16).  Thus, we reject the null hypothesis, at the 5% significance level, and conclude that the data provides convincing evidence that at least one pair of income means are different from each other.  To examine which education levels different in mean incomes, we will examine the pairwise tests with a modified significance level is 0.5% (based on the Bonferroni correction).  At the 0.5% significance level, the p-values from the pairwise tests are all significant, except for the high school-junior college pair.  Thus, we conclude that the data provides convincing evidence that the mean income is different across all education pairs except for the high school-junior college pair.  The box plots of the high school and junior college levels also suggests this, given that the centres are close to each other.  There is no associated confidence interval for the ANOVA technique and thus there is nothing to compare the ANOVA results with. 
 
 ### Conclusion:
 
