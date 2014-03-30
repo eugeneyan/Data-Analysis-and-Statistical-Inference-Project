@@ -2,6 +2,14 @@
 load(url("http://bit.ly/dasi_gss_data"))
 View(gss)
 str(gss)
+summary(gss)
+
+#subset data for 2012
+gss2012a <- subset(gss, year == 2012, select = c(caseid, year, age, sex, educ, degree, coninc, incom16))
+gss2012 <- subset(gss2012a, !is.na(degree))
+summary(gss2012)
+
+?subset
 
 #R markdown template
 download.file(url = "http://bit.ly/dasi_project_template", destfile = "dasi_project_template.Rmd")
@@ -19,10 +27,27 @@ library(ggplot2)
 #3. how does family income at 16 affect current income?
 #4. is there an interaction effect between education and family income at 16 on current income?
 
-boxplot(gss2012$coninc ~ gss2012$degree)
+#Exploratory Data Analysis
+#degree
+table(gss2012$degree)
+prop.table(table(gss2012$degree))
+barplot(table(gss2012$degree))
 
-#subset data for 2012
-gss2012 <- subset(gss, year == 2012, select = c(caseid, year, age, sex, educ, degree, coninc, incom16))
+#income
+summary(gss2012$coninc)
+hist(gss2012$coninc)
+hist(gss2012$coninc, breaks = 15)
+
+#overlapping plots of income by education
+g <- ggplot(gss2012, aes(coninc))
+g + geom_density() + labs(title = "Distribution of income in 2012") + labs(x = "Total Family Income", y = "Frequency")
+
+g <- ggplot(gss2012, aes(coninc, fill = degree))
+g + geom_density (alpha = 0.2) + labs(title = "Income Level distributions across Education Levels") + labs(x = "Total Family Income", y = "Frequency")
+boxplot(gss2012$coninc ~ gss2012$degree, xlab = "Education Level", ylab = "Total Family Income", main = "Boxplot of Total Family Income by Education Level")
+
+#boxplot of income vs degree
+boxplot(gss2012$coninc ~ gss2012$degree, xlab = "Education Level", ylab = "Total Family Income", main = "Boxplot of Total Family Income by Education Level")
 
 #distribution of current income by education level
 Lt_High <- subset(gss2012, degree == "Lt High School")
