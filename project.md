@@ -65,6 +65,10 @@ Alternative Hypothesis: At least one pair of mean incomes are different from eac
 
 There are three conditions for ANOVA, namely (i) independence, (ii) approximate normality, and (iii) equal variance.  For (i), the data was randomly sampled with full probability sampling, with the sample size for education group being less than 10% of the population and independent of each other.  For (ii), while the normal probability plots for each of the groups below show that the data is right skewed and deviates from normality, this is mitigated by the large samples sizes for each education group.  For (iii), the box plot of income by education level shows that there is roughly constant variance for the High School, Junior College, and Bachelor groups, while the Less that High School group has lower variance while the Graduate group has higher variance.  To address this, a non-parametric test such as the Kruskal-Wallis test can be used; however, this is not covered under the class syllabus.  Thus, this study will proceed with the ANOVA analysis.
 
+![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5.png) 
+
+
+
 Given that the means between more than two groups (i.e., five) will be compared, the method to be used in this study is the analysis of variance (“ANOVA”).  The ANOVA analysis will compare the means across the five groups and determine if the observed differences are attributed to between group variability (i.e., education) or within group variability (other factors).  
 
 
@@ -103,7 +107,7 @@ inference(y = gss2012$coninc, x = gss2012$degree, est = "mean", type = "ht",
 ## Graduate                    0      0.0000              0    2e-04
 ```
 
-![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5.png) 
+![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6.png) 
 
 
 ```
