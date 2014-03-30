@@ -5,13 +5,8 @@
 ### What is the relationship between one’s highest level education level attained and one’s income?
 
 <!-- Enter the code required to load your data in the space below. The data will be loaded but the line of code won't show up in your write up (echo=FALSE) in order to save space-->
-```{r echo=FALSE}
-load(url("http://bit.ly/dasi_gss_data"))
-gss2012a <- subset(gss, year == 2012, select = c(caseid, year, age, sex, educ, degree, coninc, incom16))
-?complete.cases
-gss2012 <- gss2012a[complete.cases(gss2012a), ]
-library(ggplot2)
-```
+
+
 
 <!-- In the remainder of the document, add R code chunks as needed -->
 
@@ -35,25 +30,33 @@ With regard to causality, the data cannot be used to establish causal links betw
 
 ### Exploratory data analysis:
 
-```{r, echo = FALSE}
-#degree
-table(gss2012$degree)
-prop.table(table(gss2012$degree))
+
 ```
+## 
+## Lt High School    High School Junior College       Bachelor       Graduate 
+##            222            869            130            319            180
+```
+
+```
+## 
+## Lt High School    High School Junior College       Bachelor       Graduate 
+##        0.12907        0.50523        0.07558        0.18547        0.10465
+```
+
 From the table above, we observe that most of the US population have education level of high school and below, with approximately 28.5% having a Bachelor, Masters, and above.  
 
-```{r, echo = FALSE, fig.height = 3, fig.width = 10}
-#income
-summary(gss2012$coninc)
-g <- ggplot(gss2012, aes(coninc))
-g + geom_density() + labs(title = "Distribution of income in 2012") + labs(x = "Total Family Income", y = "Frequency")
+
 ```
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##     383   16300   34500   48800   63200  179000
+```
+
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3.png) 
+
 From the table above, the median income in the US in 2012 is $34470, with a mean of $48850, and a range of $383 - $178712.  The graph also shows that income distribution is bimodal and right skewed, with a gap between $125000 and $160000 another smaller peak at the top 10% of income.  
 
-```{r, echo = FALSE, fig.height = 5, fig.width = 10}
-#boxplot of income vs degree
-boxplot(gss2012$coninc ~ gss2012$degree, xlab = "Education Level", ylab = "Total Family Income", main = "Boxplot of Total Family Income by Education Level")
-```
+![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4.png) 
+
 The box plot of income at different education levels suggests that there is a relationship between income and education, warranting a deeper investigation of the research question.
 
 ### Inference:
@@ -67,10 +70,17 @@ There are three conditions for ANOVA, namely (i) independence, (ii) approximate 
 
 Given that the means between more than two groups (i.e., five) will be compared, the method to be used in this study is the analysis of variance (“ANOVA”).  The ANOVA analysis will compare the means across the five groups and determine if the observed differences are attributed to between group variability (i.e., education) or within group variability (other factors).  
 
-```{r}
-#anova of gss2012$coninc ~ gss2012$degree
-inference(y = gss2012$coninc, x = gss2012$degree, est = "mean", type = "ht", null = 0, alternative = "greater", method = "theoretical")
+
+```r
+# anova of gss2012$coninc ~ gss2012$degree
+inference(y = gss2012$coninc, x = gss2012$degree, est = "mean", type = "ht", 
+    null = 0, alternative = "greater", method = "theoretical")
 ```
+
+```
+## Error: could not find function "inference"
+```
+
 
 
 ### Conclusion:

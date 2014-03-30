@@ -6,7 +6,8 @@ summary(gss)
 
 #subset data for 2012
 gss2012a <- subset(gss, year == 2012, select = c(caseid, year, age, sex, educ, degree, coninc, incom16))
-gss2012 <- subset(gss2012a, !is.na(degree))
+?complete.cases
+gss2012 <- gss2012a[complete.cases(gss2012a), ]
 summary(gss2012)
 
 ?subset
@@ -45,7 +46,6 @@ g + geom_density() + labs(title = "Distribution of income in 2012") + labs(x = "
 
 g <- ggplot(gss2012, aes(coninc, fill = degree))
 g + geom_density (alpha = 0.2) + labs(title = "Income Level distributions across Education Levels") + labs(x = "Total Family Income", y = "Frequency")
-boxplot(gss2012$coninc ~ gss2012$degree, xlab = "Education Level", ylab = "Total Family Income", main = "Boxplot of Total Family Income by Education Level")
 
 #boxplot of income vs degree
 boxplot(gss2012$coninc ~ gss2012$degree, xlab = "Education Level", ylab = "Total Family Income", main = "Boxplot of Total Family Income by Education Level")
