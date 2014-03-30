@@ -29,6 +29,7 @@ library(ggplot2)
 
 #Exploratory Data Analysis
 #degree
+summary(gss2012$degree)
 table(gss2012$degree)
 prop.table(table(gss2012$degree))
 barplot(table(gss2012$degree))
