@@ -40,14 +40,14 @@ barplot(table(gss2012$degree))
 #income
 summary(gss2012$coninc)
 hist(gss2012$coninc)
-hist(gss2012$coninc, breaks = 15)
+hist(gss2012$coninc, breaks = 20)
 
 #overlapping plots of income by education
 g <- ggplot(gss2012, aes(coninc))
-g + geom_density() + labs(title = "Distribution of income in 2012") + labs(x = "Total Family Income", y = "Frequency")
+g + geom_density() + labs(title = "Distribution of income in 2012") + labs(x = "Total Family Income", y = "Density")
 
 g <- ggplot(gss2012, aes(coninc, fill = degree))
-g + geom_density (alpha = 0.2) + labs(title = "Income Level distributions across Education Levels") + labs(x = "Total Family Income", y = "Frequency")
+g + geom_density (alpha = 0.2) + labs(title = "Income Level distributions across Education Levels") + labs(x = "Total Family Income", y = "Density")
 
 #boxplot of income vs degree
 par(mfrow = c(1,1))
@@ -72,6 +72,9 @@ inference(y = gss2012$coninc, x = gss2012$degree, est = "mean", type = "ht", nul
 #anova of gss2012$coninc ~ gss2012$incom16
 inference(y = gss2012$coninc, x = gss2012$incom16, est = "mean", type = "ht", null = 0, alternative = "greater", method = "theoretical")
 
+#two sample t-test of gss2012$coninc ~ gss2012$sex
+inference(y = gss2012$coninc, x = gss2012$sex, est = "mean", type = "ht", null = 0, alternative = "twosided", method = "theoretical")
+
 #regression models
 #current income ~ education level
 model1 <- lm(gss2012$coninc ~ gss2012$degree)
@@ -81,9 +84,15 @@ summary(model1)
 model2 <- lm(gss2012$coninc ~ gss2012$incom16)
 summary(model2)
 
-#current income ~ education level + income at age of 16
-model3 <- lm(gss2012$coninc ~ gss2012$degree + gss2012$incom16)
+#current income ~ sex
+model3 <- lm(gss2012$coninc ~ gss2012$sex)
 summary(model3)
 
-plot(model1)
-plot(gss2012$coninc ~ gss2012$degree)
+#current income ~ age
+model4 <- lm(gss2012$coninc ~ gss2012$age)
+summary(model4)
+
+#current income ~ education level + income at age of 16 + sex
+model5 <- lm(gss2012$coninc ~ gss2012$degree + gss2012$incom16 + gss2012$sex)
+summary(model5)
+

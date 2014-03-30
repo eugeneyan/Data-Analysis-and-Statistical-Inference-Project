@@ -53,9 +53,9 @@ From the table above, we observe that most of the US population have education l
 
 From the table above, the median income in the US in 2012 is $34470, with a mean of $48850, and a range of $383 - $178712.  The graph also shows that income distribution is bimodal and right skewed, with a gap between $125000 and $160000 another smaller peak at the top 10% of income.  
 
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4.png) 
+![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-41.png) ![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-42.png) 
 
-The box plot of income at different education levels suggests that there is a relationship between income and education, warranting a deeper investigation of the research question.
+The box plot of income at different education levels suggests that there is a relationship between income and education.  An alternative visualization, the overlapping distribution plots, further bolsters the relationship between education and income, warranting a deeper investigation of the research question.
 
 ### Inference:
 

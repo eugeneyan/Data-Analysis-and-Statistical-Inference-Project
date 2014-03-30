@@ -47,15 +47,17 @@ From the table above, we observe that most of the US population have education l
 #income
 summary(gss2012$coninc)
 g <- ggplot(gss2012, aes(coninc))
-g + geom_density() + labs(title = "Distribution of income in 2012") + labs(x = "Total Family Income", y = "Frequency")
+g + geom_density() + labs(title = "Distribution of income in 2012") + labs(x = "Total Family Income", y = "Density")
 ```
 From the table above, the median income in the US in 2012 is $34470, with a mean of $48850, and a range of $383 - $178712.  The graph also shows that income distribution is bimodal and right skewed, with a gap between $125000 and $160000 another smaller peak at the top 10% of income.  
 
 ```{r, echo = FALSE, fig.height = 4, fig.width = 10}
 #boxplot of income vs degree
 boxplot(gss2012$coninc ~ gss2012$degree, xlab = "Education Level", ylab = "Total Family Income", main = "Boxplot of Total Family Income by Education Level")
+g <- ggplot(gss2012, aes(coninc, fill = degree))
+g + geom_density (alpha = 0.2) + labs(title = "Income Level distributions across Education Levels") + labs(x = "Total Family Income", y = "Density")
 ```
-The box plot of income at different education levels suggests that there is a relationship between income and education, warranting a deeper investigation of the research question.
+The box plot of income at different education levels suggests that there is a relationship between income and education.  An alternative visualization, the overlapping distribution plots, further bolsters the relationship between education and income, warranting a deeper investigation of the research question.
 
 ### Inference:
 
@@ -65,7 +67,7 @@ Alternative Hypothesis: At least one pair of mean incomes are different from eac
 
 There are three conditions for ANOVA, namely (i) independence, (ii) approximate normality, and (iii) equal variance.  For (i), the data was randomly sampled with full probability sampling, with the sample size for education group being less than 10% of the population and independent of each other.  For (ii), while the normal probability plots for each of the groups below show that the data is right skewed and deviates from normality, this is mitigated by the large samples sizes for each education group.  For (iii), the box plot of income by education level shows that there is roughly constant variance for the High School, Junior College, and Bachelor groups, while the Less that High School group has lower variance while the Graduate group has higher variance.  To address this, a non-parametric test such as the Kruskal-Wallis test can be used; however, this is not covered under the class syllabus.  Thus, this study will proceed with the ANOVA analysis.
 
-```{r, echo=FALSE, fig.height=3, fig.width=10}
+```{r, echo=FALSE, fig.height=2.5, fig.width=10}
 par(mfrow = c(1,5))
 qqnorm(gss2012$coninc[gss2012$degree == "Lt High School"], main = "Lt High School")
 qqline(gss2012$coninc[gss2012$degree == "Lt High School"])
