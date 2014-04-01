@@ -95,4 +95,3 @@ summary(model4)
 #current income ~ education level + income at age of 16 + sex
 model5 <- lm(gss2012$coninc ~ gss2012$degree + gss2012$incom16 + gss2012$sex)
 summary(model5)
-
