@@ -1,5 +1,8 @@
 ### What is the relationship between one’s highest level education level attained and one’s income?
 
+
+
+
 ### Introduction:
 
 “An investment in education pays the best interest” - Benjamin Franklin.  The quote above suggests that 
