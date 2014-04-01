@@ -3,7 +3,7 @@ load(url("http://bit.ly/dasi_gss_data"))
 View(gss)
 str(gss)
 summary(gss)
-
+ oeu
 #subset data for 2012
 gss2012a <- subset(gss, year == 2012, select = c(caseid, year, age, sex, educ, degree, coninc, incom16))
 gss2012 <- gss2012a[complete.cases(gss2012a), ]
