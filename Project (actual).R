@@ -6,11 +6,8 @@ summary(gss)
 
 #subset data for 2012
 gss2012a <- subset(gss, year == 2012, select = c(caseid, year, age, sex, educ, degree, coninc, incom16))
-?complete.cases
 gss2012 <- gss2012a[complete.cases(gss2012a), ]
 summary(gss2012)
-
-?subset
 
 #R markdown template
 download.file(url = "http://bit.ly/dasi_project_template", destfile = "dasi_project_template.Rmd")
