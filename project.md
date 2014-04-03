@@ -34,6 +34,7 @@ With regard to causality, the data cannot be used to establish causal links betw
 ##        0.12907        0.50523        0.07558        0.18547        0.10465
 ```
 
+
 From the table above, we observe that most of the US population have education level of high school and below, with approximately 28.5% having a Bachelor, Masters, and above.  
 
 
@@ -44,9 +45,11 @@ From the table above, we observe that most of the US population have education l
 
 ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3.png) 
 
+
 From the table above, the median income in the US in 2012 is $34470, with a mean of $48850, and a range of $383 - $178712.  The graph also shows that income distribution is bimodal and right skewed, with a gap between $125000 and $160000 another smaller peak at the top 10% of income.  
 
 ![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-41.png) ![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-42.png) 
+
 
 The box plot of income at different education levels suggests that there is a relationship between income and education.  An alternative visualization, the overlapping distribution plots, further bolsters the relationship between education and income, warranting a deeper investigation of the research question.
 
@@ -59,7 +62,6 @@ Alternative Hypothesis: At least one pair of mean incomes are different from eac
 There are three conditions for ANOVA, namely (i) independence, (ii) approximate normality, and (iii) equal variance.  For (i), the data was randomly sampled with full probability sampling, with the sample size for education group being less than 10% of the population and independent of each other.  For (ii), while the normal probability plots for each of the groups below show that the data is right skewed and deviates from normality, this is mitigated by the large samples sizes for each education group.  For (iii), the box plot of income by education level shows that there is roughly constant variance for the High School, Junior College, and Bachelor groups, while the Less that High School group has lower variance while the Graduate group has higher variance.  To address this, a non-parametric test such as the Kruskal-Wallis test can be used; however, this is not covered under the class syllabus.  Thus, this study will proceed with the ANOVA analysis.
 
 ![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5.png) 
-
 
 
 Given that the means between more than two groups (i.e., five) will be compared, the method to be used in this study is the analysis of variance (“ANOVA”).  The ANOVA analysis will compare the means across the five groups and determine if the observed differences are attributed to between group variability (i.e., education) or within group variability (other factors).  
@@ -113,4 +115,3 @@ The p-value from the ANOVA is almost 0 (i.e., less than 2.2e-16).  Thus, we reje
 ### Conclusion:
 
 Insert conclusion here...
-

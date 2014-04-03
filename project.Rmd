@@ -3,7 +3,6 @@
 ```{r echo=FALSE}
 load(url("http://bit.ly/dasi_gss_data"))
 gss2012a <- subset(gss, year == 2012, select = c(caseid, year, age, sex, educ, degree, coninc, incom16))
-?complete.cases
 gss2012 <- gss2012a[complete.cases(gss2012a), ]
 library(ggplot2)
 source("http://bit.ly/dasi_inference")
