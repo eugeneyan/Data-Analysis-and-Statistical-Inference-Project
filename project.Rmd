@@ -10,9 +10,13 @@ source("http://bit.ly/dasi_inference")
 
 ### Introduction:
 
-“An investment in education pays the best interest” - Benjamin Franklin.  The quote above suggests that 
 
-What is the relationship between one’s highest level education level attained and one’s income?
+“An investment in education pays the best interest” - Benjamin Franklin.  
+It is often said that education is the key to success.  It broadens one’s mind, builds confidence to make decisions, face challenges and accept failures in life, and opens the door to new and better job opportunities.  (Notwithstanding, some of the world’s richest and successful people were school drop outs.  Steve Jobs never graduated from college and Bill Gates dropped out of university; they are the outliers who prove that one’s success does not completely depend on education).
+
+However, consider the cost of education.  According to an article from Bloomberg, college costs have surged 500% in the US since 1985.  Average tuition and fees at private schools in the 2013 - 2014 academic year was $30,094, up from $18,060 in 2002 - 2003, based on the College Board’s statistics.  Consider also the ballooning education debt, which exceeded $1 trillion in the third quarter of 2013; the average debt load for the class of 2012 was $29,400.  
+
+In light of the above, this paper will attempt to answer the following question: "What is the relationship between one’s highest level education level attained and one’s income?”.  Does education, across all levels, lead to higher income?  Or do some education qualifications lead to greater increases in income?
 
 ### Data:
 
@@ -91,3 +95,17 @@ The p-value from the ANOVA is almost 0 (i.e., less than 2.2e-16).  Thus, we reje
 ### Conclusion:
 
 Insert conclusion here...
+
+### References:
+
+
+
+Smith, Tom W., Michael Hout, and Peter V. Marsden. General Social Survey, 1972-2012 [Cumulative File]. ICPSR34802-v1. Storrs, CT: Roper Center for Public Opinion Research, University of Connecticut /Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributors], 2013-09-11. doi:10.3886/ICPSR34802.v1. 
+URL: http://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/34802/version/1
+Dataset URL: http://bit.ly/dasi_gss_data
+
+Jamrisko, M., and Kolet, I. (2013, Aug 2013).  College Costs Surge 500% in U.S. Since 1985: Chart of the Day.  Retrieved from http://www.bloomberg.com/news/2013-08-26/college-costs-surge-500-in-u-s-since-1985-chart-of-the-day.html
+
+Gage, C. S., and Lorin, J. (2014, Jan 15).  Fed Student-Loan Focus Shows Recognition of Growth Risk.  Retrieved from http://www.bloomberg.com/news/2014-01-15/fed-student-loan-focus-recognizes-threat-to-u-s-economy.html
+
+Ellis, B. (2013, Dec 5).  Average student loan debt: $29,400.  Retrieved from http://money.cnn.com/2013/12/04/pf/college/student-loan-debt/
