@@ -5,28 +5,29 @@
 
 ### Introduction:
 
+*“An investment in education pays the best interest” - Benjamin Franklin.*
 
-“An investment in education pays the best interest” - Benjamin Franklin.  
-It is often said that education is the key to success.  It broadens one’s mind, builds confidence to make decisions, face challenges and accept failures in life, and opens the door to new and better job opportunities.  (Notwithstanding, some of the world’s richest and successful people were school drop outs.  Steve Jobs never graduated from college and Bill Gates dropped out of university; they are the outliers who prove that one’s success does not completely depend on education).
+It is often said that education is the key to success.  Education broadens one’s mind, builds confidence to make decisions, face challenges and accept failures, and opens the door to new and better job opportunities.  (Notwithstanding, some of the world’s richest and most successful people were school dropouts.  Steve Jobs never graduated from college while Bill Gates dropped out of university; they are the outliers who prove that success is not completely dependent on education).
 
-However, consider the cost of education.  According to an article from Bloomberg, college costs have surged 500% in the US since 1985.  Average tuition and fees at private schools in the 2013 - 2014 academic year was $30,094, up from $18,060 in 2002 - 2003, based on the College Board’s statistics.  Consider also the ballooning education debt, which exceeded $1 trillion in the third quarter of 2013; the average debt load for the class of 2012 was $29,400.  
+However, consider the cost of education.  College costs have surged 500% in the US since 1985 (Jamrisko & Kolet, 2013).  Average tuition at private schools was $30,094 in 2013 - 2014, up from $18,060 in 2002 - 2003 (Gage & Lorin, 2014).  Education debt exceeded $1 trillion in the third quarter of 2013 (Gage & Lorin, 2014); average debt load for the class of 2012 was $29,400 (Ellis, 2013).  Given the state of the economy today, a college education is by no means guaranteed a stable and decent paying job.    
 
-In light of the above, this paper will attempt to answer the following question: "What is the relationship between one’s highest level education level attained and one’s income?”.  Does education, across all levels, lead to higher income?  Or do some education qualifications lead to greater increases in income?
+In light of the above, this paper will examine the following question: *"What is the relationship between one’s highest level education level attained and one’s income?”*.  Does education, across all levels, lead to higher income?  Or do certain education qualifications lead to greater increases in income?
 
 ### Data:
 
-To examine the research question above, this paper will be using data from the General Social Survey (“GSS”), a sociological survey used to collect data on demographic characteristics and attitudes of residents of the United States.  While the GSS provides data from 1972 - 2012, to simplify the analyses, I will examine only responses from the year 2012.  The intent is to control for possible confounding variables including time, improvements in the education system, and rising levels of income.  
+To examine the research question, data from the General Social Survey (“GSS”) will be used.  The GSS is a sociological survey used to collect data on demographic characteristics and attitudes of residents of the United States.  While the GSS provides data from 1972 - 2012, to simplify the analyses, this paper will examine only responses from the year 2012.  The intent is to control for possible confounding variables including time, improvements in the education system, and rising levels of income.  
 
-Data collection for the GSS was conducted through (i) computer-assisted personal interviews, (ii) face-to-face interviews, (iii) and telephone interviews).  For the 2012 GSS data, the cases were a sample of all English and Spanish speaker people age 18 and over who were living in households at the time of the survey (or non-institutionalised) in the US.  The two variables studied are the highest level of education attained (“education”) and total family income in constant dollars (“income”); given that there is no data collected on personal income, total family income will be examined as a proxy instead.  In addition, while a measure of income in current dollars is available, I will examine income in constant dollars (i.e., inflation-adjusted income) to allow for comparison across time in future studies.  Education is a categorical level with 5 levels (i.e., “Less than High School”, “High School”, “Junior College”, “Bachelor”, “Graduate” (i.e., Masters and above) and is labeled “degree" in the dataset.  Income is a continuous variable ranging from $383 - $178712, with a median of $34470, and is labeled “coninc” in the data set.
+Data collection for the GSS was conducted through (i) computer-assisted personal interviews, (ii) face-to-face interviews, (iii) and telephone interviews.  For the 2012 GSS data, the cases were a sample of all English and Spanish speaking people age 18 and over who were living in households at the time of the survey (or non-institutionalised) in the US.  For this paper, the two variables studied are the highest level of education attained (“education”) and total family income in constant dollars (“income”); given that there is no data collected on *personal* income, *total family* income will be examined as a proxy.  In addition, while a measure of income in *current dollars* is available, this paper will examine income in *constant dollars* (i.e., inflation-adjusted income) to allow for comparison across time with other studies.  Education is a categorical variable with 5 levels (i.e., “Less than High School”, “High School”, “Junior College”, “Bachelor”, “Graduate” (i.e., Masters and above)) and is labeled “degree" in the dataset.  Income is a continuous variable ranging from $383 - $178712, with a median of $34470, and is labeled “coninc” in the data set.
 
-The type of study is an observational study given that no random assignment of individuals to different conditions/treatments was conducting.  With regard to sampling, full probability sampling, where every individual had a chance of being selected, was conducted; notwithstanding, there are some exceptions to this which will be discussed below.  The sampling methodology is stratified sampling, where the population was stratified first by region followed by country.  With regard to experimental design, there was no random assignment of individuals to different conditions or treatments.  
+The study is an observational study given that there was no random assignment of individuals to different conditions/treatments.  Full probability sampling, where every individual had a chance of being selected, was conducted; notwithstanding, there were exceptions that will be discussed below.  The sampling method was stratified sampling; the population was stratified first by region followed by country.  With regard to experimental design, there was no random assignment of individuals to different conditions or treatments.
 
-With regard to generalizability, the population of interest is the working US population.  Given that the GSS data was collected via full probability sampling on the entire US population, the findings from this paper can be generalised to the entire working US population.  Potential sources of bias in the GSS may arise given that the GSS does not sample from (i) minors and (ii) people who do not speak either English and Spanish.  With regard to (i), the bias is likely to be minor (pun intended) given that our interest is examining one’s personal income; this is based on the assumption that minors are likely to still be pursuing an education and not have an income.  With regard to (ii), a quick check and calculation from a 2011 Census on language use in the US suggests that 0.294% of the US population do not speak English and/or Spanish.  Taking the above into account, the biases from the GSS are likely to have a negligible impact on the generalizability of this study.
+The population of interest is the working US population.  As full probability sampling was conducted, the findings can be generalised to the entire working US population.  Potential sources of bias may arise given that the GSS 2012 did not sample from (i) minors and (ii) people who do not speak either English and Spanish.  For (i), the bias is likely to be minor (pun intended) given that our interest is examining the working population’s income, assuming that minors are still pursuing an education and not have an income.  With regard to (ii), a quick check from the 2011 census on language use suggests that only 0.294% of the US population do not speak English and/or Spanish (Ryan, 2013).  Thus, the biases in the 2012 GSS will likely have a negligible impact on the generalizability of this study.
 
-With regard to causality, the data cannot be used to establish causal links between the variables of interest as there was no random assignment to the explanatory/independent variable (i.e., education).  Morally, randomly assignment people to different levels of education would be highly unethical.
+With regard to causality, the data cannot be used to establish causal links between the variables of interest as there was no random assignment to the explanatory/independent variable (i.e., education).
 
 ### Exploratory data analysis:
 
+#### Education by Count and Percentage
 
 ```
 ## Lt High School    High School Junior College       Bachelor       Graduate 
@@ -39,37 +40,42 @@ With regard to causality, the data cannot be used to establish causal links betw
 ```
 
 
-From the table above, we observe that most of the US population have education level of high school and below, with approximately 28.5% having a Bachelor, Masters, and above.  
+A majority of the US population has an education level of high school level and below, with approximately 28.5% having a bachelor degree and above. 
 
+#### Summary and Density Distribution of 2012 GSS Current Income
 
 ```
 ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
 ##     383   16300   34500   48800   63200  179000
 ```
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3.png) 
+<img src="figure/unnamed-chunk-3.png" title="plot of chunk unnamed-chunk-3" alt="plot of chunk unnamed-chunk-3" style="display: block; margin: auto;" />
 
 
-From the table above, the median income in the US in 2012 is $34470, with a mean of $48850, and a range of $383 - $178712.  The graph also shows that income distribution is bimodal and right skewed, with a gap between $125000 and $160000 another smaller peak at the top 10% of income.  
+The median income in the US in 2012 is $34,470, with a mean of $48,850, and a range of $383 - $178,712.  Income distribution is bimodal and right skewed, with one peak at approximately $15,000 and another at the extreme right tail, with a gap between $125,000 and $160,000. 
 
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-41.png) ![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-42.png) 
+#### Boxplot and Overlapping Density Distribution of Current Income across Education
+<img src="figure/unnamed-chunk-41.png" title="plot of chunk unnamed-chunk-4" alt="plot of chunk unnamed-chunk-4" style="display: block; margin: auto;" /><img src="figure/unnamed-chunk-42.png" title="plot of chunk unnamed-chunk-4" alt="plot of chunk unnamed-chunk-4" style="display: block; margin: auto;" />
 
 
-The box plot of income at different education levels suggests that there is a relationship between income and education.  An alternative visualization, the overlapping distribution plots, further bolsters the relationship between education and income, warranting a deeper investigation of the research question.
+The box plot suggests that there is a relationship between income and education.  An alternative visualization, the overlapping distribution plots, further hints at the relationship between education and income, warranting a deeper investigation of the research question.
 
 ### Inference:
 
-The hypotheses for this study are as stated below:   
-Null Hypothesis: The mean income is the same across all levels of education.   
-Alternative Hypothesis: At least one pair of mean incomes are different from each other.
 
-There are three conditions for ANOVA, namely (i) independence, (ii) approximate normality, and (iii) equal variance.  For (i), the data was randomly sampled with full probability sampling, with the sample size for education group being less than 10% of the population and independent of each other.  For (ii), while the normal probability plots for each of the groups below show that the data is right skewed and deviates from normality, this is mitigated by the large samples sizes for each education group.  For (iii), the box plot of income by education level shows that there is roughly constant variance for the High School, Junior College, and Bachelor groups, while the Less that High School group has lower variance while the Graduate group has higher variance.  To address this, a non-parametric test such as the Kruskal-Wallis test can be used; however, this is not covered under the class syllabus.  Thus, this study will proceed with the ANOVA analysis.
+The hypotheses for this study are as stated below:  
+**Null Hypothesis: The mean income is the same across all levels of education.**   
+**Alternative Hypothesis: At least one pair of mean incomes are different from each other.**
 
-![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5.png) 
+There are three conditions for ANOVA, namely (i) independence, (ii) approximate normality, and (iii) equal variance.  For (i), the data was randomly sampled with full probability sampling, with the sample size of each education group being less than 10% of the population and independent of each other.  For (ii), while the normal probability plots (below) for each education group show that the data is right skewed and deviates from normality, this is mitigated by the large samples sizes for each education group.  For (iii), the previous box plot of income across education levels shows roughly constant variance for the High School, Junior College, and Bachelor groups, while the Less than High School group has lower variance and the Graduate group has higher variance.  To address this, a non-parametric test such as the Kruskal-Wallis test can be used; however, this is not covered under the class syllabus.  Thus, this study will proceed with the ANOVA analysis.
+
+#### Normal Probability Plots of Current Income at each Education
+<img src="figure/unnamed-chunk-5.png" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" style="display: block; margin: auto;" />
 
 
-Given that the means between more than two groups (i.e., five) will be compared, the method to be used in this study is the analysis of variance (“ANOVA”).  The ANOVA analysis will compare the means across the five groups and determine if the observed differences are attributed to between group variability (i.e., education) or within group variability (other factors).  
-
+As the means between more than two groups (i.e., five) will be compared, the study will use the analysis of variance (“ANOVA”).  The ANOVA analysis will compare the means across the five groups and determine if the observed differences are due to between-group variability (i.e., education) or within-group variability (other factors).  
+  
+#### Anova of Current Income and Education
 
 ```r
 # anova of gss2012$coninc ~ gss2012$degree
@@ -106,15 +112,15 @@ inference(y = gss2012$coninc, x = gss2012$degree, est = "mean", type = "ht",
 ## Graduate                    0      0.0000              0    2e-04
 ```
 
-![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6.png) 
+<img src="figure/unnamed-chunk-6.png" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" style="display: block; margin: auto;" />
 
 
 ```
-## [1] "Bonferroni Correction: Modified Significance Level = 0.5/((5*4)/2) = 0.005"
+## [1] "Bonferroni Correction: Modified alpha level = 0.5/((5*4)/2) = 0.005"
 ```
 
 
-#### Income Quantiles Segmented by Education Level
+#### Income Quantiles at each Education
 
 ```
 ## gss2012$degree: Lt High School
@@ -139,23 +145,31 @@ inference(y = gss2012$coninc, x = gss2012$degree, est = "mean", type = "ht",
 ```
 
 
-The p-value from the ANOVA is almost 0 (i.e., less than 2.2e-16).  Thus, we reject the null hypothesis, at the 5% significance level, and conclude that the data provides convincing evidence that at least one pair of income means are different from each other.  To examine which education levels different in mean incomes, we will examine the pairwise tests with a modified significance level is 0.5% (based on the Bonferroni correction).  At the 0.5% significance level, the p-values from the pairwise tests are all significant, except for the high school-junior college pair.  Thus, we conclude that the data provides convincing evidence that the mean income is different across all education pairs except for the high school-junior college pair.  The box plots of the high school and junior college levels also suggests this, given that the centres are close to each other.  There is no associated confidence interval for the ANOVA technique and thus there is nothing to compare the ANOVA results with. 
+The p-value from the ANOVA is almost 0 (i.e., less than 2.2e-16).  Thus, we reject the null hypothesis, at the 5% significance level, and conclude that the data provides convincing evidence that at least one pair of income means are different from each other.  To determine which education levels differ in mean incomes, we examine the pairwise tests with a modified significance level of 0.5% (based on the Bonferroni correction).  At the 0.5% significance level, p-values from all the pairwise tests are significant, except for the high school-junior college pair.  Thus, we conclude the data provides convincing evidence that mean income is different across all education pairs except for the high school-junior college pair.  The box plots of income for high school and junior college education, with the medians close to each other, also suggests this.  There is no associated confidence interval for the ANOVA technique and thus there is nothing to compare the ANOVA results with.  
 
 ### Conclusion:
 
-To summarise the findings, the GSS 2012 data provides evidence that there is a significant and positive relationship between education and income, where higher education qualifications lead to higher incomes.  Notwithstanding, it should be noted that there is no significant difference in income between individuals with a high school education and individuals with a junior college education.  
+To summarise the findings, in 2012, there is a significant and positive relationship between higher education level and income (i.e., higher education qualifications lead to higher income).  Notwithstanding, it should be noted that there is no significant difference in income between the high school and junior college education levels.
 
-What is the return on investment (ROI) of a Bachelor’s degree?  Examining income quantiles segmented by education level, the median income of a bachelor degree holder is $28,735 higher than the median income of one with only a junior college education; putting it in another perspective, bachelor degree holders earn nearly twice that of junior college graduates.  Recall that in the introduction, it was shared that the average education debt load for 2012 was $29,400.  Assuming a buoyant economy and degree job, the increase in median income from a Bachelor degree should be able to pay off the education debt incurred.  
+What is the return on investment (ROI) of a bachelor's degree?  For this, we examine income quantiles across education levels.  Median income for bachelor degree holders is nearly twice that of junior college graduates, with a difference of $28,735.  In the introduction, it was shared that the average education debt load for 2012 was $29,400.  Assuming a buoyant economy and decent job, the increase in median income from a bachelor's degree should pay off the education debt incurred within a year.
 
-What about Graduate degree holders (i.e., Masters, PhDs)?  Based on median income, graduate degree holders earn $13,405 more than bachelor degree holders.  This may not seem like much.  However, examining income at the 75th percentile, graduate degree holders earn nearly twice as much as bachelor degree holders, with a difference of $86,762.  Therefore, it seem that for the top 25%, a graduate degree does indeed pay the best interest.  
+Next, we examine the difference in income between bachelor degree and graduate degree holders.  Based on median income, graduate degree holders earn $13,405 more than bachelor degree holders; this may not seem like much relative to the cost of a graduate education.  However, examining income at the 75th percentile, graduate degree holders earn nearly twice that of bachelor degree holders, with a difference of $86,762.  It seems that for the top 25%, a graduate degree does pay better interest than a bachelor’s degree. 
 
-However, this is not to say that one’s income in limited by their level of education.  Referring to the box plots in exploratory data analysis, there are outliers at every education level that earn extremely high income.  This is further seen in the overlapping distribution plots, where high income earners at the right tail of the distribution is made up of all education levels (though they are predominantly bachelor degree and graduate degree holders).  
+However, this analysis does not imply that income is limited *solely* by education level.  Referring to the box plots in exploratory data analysis, there are outliers at every education level that earn extremely high income.  This is also seen in the overlapping distribution plots, where high income earners at the right tail of the distribution consists of all education levels (though predominantly bachelor's degree and graduate degree holders).  
 
-One possible shortcoming is that the current data does not include people who do not speak either English or Spanish.  While this is only 0.294% of the population, future research could try to include this segment of the population.  In addition, the current analyses does not take into account and control for possible extraneous variables such as age, gender, and family background (i.e., family income at the age of 16).  It would be exciting to examine the relationship between these variables and current income in a multiple regression model in the future.
+One shortcoming of the study is the current data not including people who do not speak either English or Spanish.  While this is only 0.294% of the population, future research could try to include this segment of the population.  Another limitation is that *total family income*, instead of *personal income*, was used in the study as the measure for income; perhaps data on personal income could be collected and analysed in future studies.  Another shortcoming is the lack of equal variance in income across education levels; to address this issue, the Kruskal-Wallis test can be used in further research and analysis.
 
-### Further analysis:
-Note: A multiple regression analysis with (i) education, (ii) age, (iii) gender, and (iv) family income at the age of 16 as explanatory variables with current income as the response variable.  In a nutshell, (i) education continues to be strongly related to current income, (ii) age does not have a significant relationship with income, (iii) gender is significantly related to income, with females earning less, and (iv) family income is significantly related to current income only if your family income was above average.  The summary of the regression model is appended below.  
-![plot of chunk unnamed-chunk-9](figure/unnamed-chunk-9.png) 
+The current analysis does not take into account possible extraneous variables such as age, gender, and family background (i.e., family income at the age of 16).  Future research could examine the relationship between these variables and current income in a multiple regression model.
+
+
+### Further Analysis
+
+*“Education, beyond all other devices of human origin, is the great equaliser of the conditions of men, the balance-wheel of the social machinery” - Horace Mann*  
+
+Note: A multiple regression analysis has been done with (i) education, (ii) age, (iii) gender, and (iv) family income at the age of 16 as explanatory variables and current income as the response variable.  Based on the analysis, (i) higher education continues to be strongly and positively related to current income, (ii) age does not have a significant relationship with income, (iii) gender is significantly related to income, with females earning less, and (iv) family income is significantly related to current income *only* if your family income was "above average", but not "far above average”.  It seems that while education is able to lift people out of poverty, it has not been able to completely level the playing field for those coming from a poor family background and women.  An overlapping plot of income across gender and a summary of the regression analysis is appended below.
+
+#### Overlapping plot of Current Income for each Gender and multiple regression model of Education, Family Income, and Gender on Current Income
+<img src="figure/unnamed-chunk-9.png" title="plot of chunk unnamed-chunk-9" alt="plot of chunk unnamed-chunk-9" style="display: block; margin: auto;" />
 
 ```
 ## 

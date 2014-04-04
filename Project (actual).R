@@ -47,7 +47,7 @@ g <- ggplot(gss2012, aes(coninc, fill = degree))
 g + geom_density (alpha = 0.2) + labs(title = "Income Level distributions across Education Levels") + labs(x = "Total Family Income", y = "Density")
 
 g <- ggplot(gss2012, aes(coninc, fill = sex))
-g + geom_density (alpha = 0.2) + labs(title = "Income Level distributions across Gender") + labs(x = "Total Family Income", y = "Density") + scale_color_brewer(palette = "Set3")
+g + geom_density (alpha = 0.2) + labs(title = "Income Level distributions across Gender") + labs(x = "Total Family Income", y = "Density") + scale_fill_manual( values = c("#0066FF","#FF0099"))
 
 ?geom_density
 
