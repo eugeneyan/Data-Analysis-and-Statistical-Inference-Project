@@ -111,7 +111,9 @@ One possible shortcoming is that the current data does not include people who do
 
 ### Further analysis:
 Note: A multiple regression analysis with (i) education, (ii) age, (iii) gender, and (iv) family income at the age of 16 as explanatory variables with current income as the response variable.  In a nutshell, (i) education continues to be strongly related to current income, (ii) age does not have a significant relationship with income, (iii) gender is significantly related to income, with females earning less, and (iv) family income is significantly related to current income only if your family income was above average.  The summary of the regression model is appended below.  
-```{r, echo=FALSE}
+```{r, echo=FALSE, fig.height=4}
+g <- ggplot(gss2012, aes(coninc, fill = sex))
+g + geom_density (alpha = 0.2) + labs(title = "Income Level distributions across Gender") + labs(x = "Total Family Income", y = "Density") + scale_fill_manual( values = c("#0066FF","#FF0099"))
 model5 <- lm(gss2012$coninc ~ gss2012$degree + gss2012$incom16 + gss2012$sex)
 summary(model5)
 "Note: Age was not included in the regression model as a prior t-test had showed no significant relationship between age and current income"
@@ -128,3 +130,9 @@ Jamrisko, M., and Kolet, I. (2013, Aug 2013).  College Costs Surge 500% in U.S. 
 Gage, C. S., and Lorin, J. (2014, Jan 15).  Fed Student-Loan Focus Shows Recognition of Growth Risk.  Retrieved from http://www.bloomberg.com/news/2014-01-15/fed-student-loan-focus-recognizes-threat-to-u-s-economy.html
 
 Ellis, B. (2013, Dec 5).  Average student loan debt: $29,400.  Retrieved from http://money.cnn.com/2013/12/04/pf/college/student-loan-debt/
+
+### Appendix
+```{r, echo=FALSE}
+print(gss2012[1:50, ])
+```
+

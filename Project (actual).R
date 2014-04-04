@@ -31,18 +31,25 @@ summary(gss2012$degree)
 table(gss2012$degree)
 prop.table(table(gss2012$degree))
 barplot(table(gss2012$degree))
+by(gss2012$coninc, gss2012$degree, quantile)
 
 #income
 summary(gss2012$coninc)
 hist(gss2012$coninc)
 hist(gss2012$coninc, breaks = 20)
+by(gss2012$coninc, gss2012$degree, quantile)
 
 #overlapping plots of income by education
 g <- ggplot(gss2012, aes(coninc))
-g + geom_density() + labs(title = "Distribution of income in 2012") + labs(x = "Total Family Income", y = "Density")
+g + geom_histogram(aes(y = ..density..), binwidth = 5000, colour = "black", fill = "white") + geom_density() + labs(title = "Distribution of income in 2012") + labs(x = "Total Family Income", y = "Density")
 
 g <- ggplot(gss2012, aes(coninc, fill = degree))
 g + geom_density (alpha = 0.2) + labs(title = "Income Level distributions across Education Levels") + labs(x = "Total Family Income", y = "Density")
+
+g <- ggplot(gss2012, aes(coninc, fill = sex))
+g + geom_density (alpha = 0.2) + labs(title = "Income Level distributions across Gender") + labs(x = "Total Family Income", y = "Density") + scale_color_brewer(palette = "Set3")
+
+?geom_density
 
 #boxplot of income vs degree
 par(mfrow = c(1,1))

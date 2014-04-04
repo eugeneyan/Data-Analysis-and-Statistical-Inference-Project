@@ -154,7 +154,8 @@ However, this is not to say that one’s income in limited by their level of edu
 One possible shortcoming is that the current data does not include people who do not speak either English or Spanish.  While this is only 0.294% of the population, future research could try to include this segment of the population.  In addition, the current analyses does not take into account and control for possible extraneous variables such as age, gender, and family background (i.e., family income at the age of 16).  It would be exciting to examine the relationship between these variables and current income in a multiple regression model in the future.
 
 ### Further analysis:
-Note: the author has done a multiple regression analysis with (i) education, (ii) age, (iii) gender, and (iv) family income at the age of 16 as explanatory variables with current income as the response variable.  In a nutshell, (i) education continues to be strongly related to current income, (ii) age does not have a significant relationship with income, (iii) gender is significantly related to income, with females earning less, and (iv) family income is significantly related to current income only if your family income was above average.  The summary of the regression model is appended below.  
+Note: A multiple regression analysis with (i) education, (ii) age, (iii) gender, and (iv) family income at the age of 16 as explanatory variables with current income as the response variable.  In a nutshell, (i) education continues to be strongly related to current income, (ii) age does not have a significant relationship with income, (iii) gender is significantly related to income, with females earning less, and (iv) family income is significantly related to current income only if your family income was above average.  The summary of the regression model is appended below.  
+![plot of chunk unnamed-chunk-9](figure/unnamed-chunk-9.png) 
 
 ```
 ## 
@@ -202,3 +203,61 @@ Jamrisko, M., and Kolet, I. (2013, Aug 2013).  College Costs Surge 500% in U.S. 
 Gage, C. S., and Lorin, J. (2014, Jan 15).  Fed Student-Loan Focus Shows Recognition of Growth Risk.  Retrieved from http://www.bloomberg.com/news/2014-01-15/fed-student-loan-focus-recognizes-threat-to-u-s-economy.html
 
 Ellis, B. (2013, Dec 5).  Average student loan debt: $29,400.  Retrieved from http://money.cnn.com/2013/12/04/pf/college/student-loan-debt/
+
+### Appendix
+
+```
+##       caseid year age    sex educ         degree coninc           incom16
+## 55088  55088 2012  22   Male   16       Bachelor 178712     Above Average
+## 55089  55089 2012  21   Male   12    High School 178712     Above Average
+## 55090  55090 2012  42   Male   12    High School  91920     Below Average
+## 55091  55091 2012  49 Female   13    High School 107240 Far Above Average
+## 55092  55092 2012  70 Female   16       Bachelor  42130     Below Average
+## 55094  55094 2012  35 Female   15 Junior College  24895           Average
+## 55095  55095 2012  24 Female   11 Lt High School   4213           Average
+## 55096  55096 2012  28 Female    9 Lt High School    383           Average
+## 55097  55097 2012  28 Female   17       Bachelor  24895 Far Below Average
+## 55098  55098 2012  55   Male   10 Lt High School    383     Above Average
+## 55099  55099 2012  36 Female   16       Bachelor  42130     Below Average
+## 55100  55100 2012  28 Female   12    High School   6894           Average
+## 55101  55101 2012  59 Female   12    High School  18193 Far Below Average
+## 55103  55103 2012  35 Female   13    High School  42130           Average
+## 55104  55104 2012  36   Male   12    High School  42130           Average
+## 55105  55105 2012  47 Female   13    High School  34470     Above Average
+## 55106  55106 2012  55   Male   12    High School  51705     Below Average
+## 55107  55107 2012  18 Female   12    High School  18193     Below Average
+## 55109  55109 2012  39   Male   10 Lt High School  34470     Below Average
+## 55110  55110 2012  54   Male   14 Junior College  76600           Average
+## 55111  55111 2012  45 Female   16 Junior College 107240     Below Average
+## 55112  55112 2012  71   Male   12    High School  91920     Below Average
+## 55114  55114 2012  22   Male   15    High School 178712     Above Average
+## 55116  55116 2012  81 Female   16       Bachelor  34470     Below Average
+## 55117  55117 2012  44 Female   13    High School   6894           Average
+## 55118  55118 2012  78   Male   16       Bachelor  63195     Above Average
+## 55119  55119 2012  63 Female   14 Junior College  42130           Average
+## 55120  55120 2012  73   Male   19       Graduate 178712 Far Below Average
+## 55121  55121 2012  40   Male   16       Bachelor  51705     Below Average
+## 55122  55122 2012  42 Female   14    High School  51705     Below Average
+## 55123  55123 2012  62   Male   18       Graduate  51705           Average
+## 55124  55124 2012  52   Male   11    High School  76600           Average
+## 55125  55125 2012  49 Female   12    High School  34470           Average
+## 55126  55126 2012  27 Female   17       Bachelor  24895           Average
+## 55127  55127 2012  30 Female   14    High School  34470           Average
+## 55128  55128 2012  29 Female   18       Graduate  76600           Average
+## 55129  55129 2012  69 Female   14    High School  91920     Below Average
+## 55130  55130 2012  51 Female   18       Graduate 178712           Average
+## 55131  55131 2012  57 Female   16       Bachelor 178712     Below Average
+## 55132  55132 2012  44   Male   16       Bachelor 178712     Above Average
+## 55133  55133 2012  73 Female   16       Bachelor 178712     Above Average
+## 55134  55134 2012  73 Female   16       Bachelor 178712           Average
+## 55135  55135 2012  68   Male   16       Graduate 178712 Far Above Average
+## 55136  55136 2012  84 Female   16       Bachelor  51705           Average
+## 55137  55137 2012  63   Male   19       Graduate 178712     Below Average
+## 55138  55138 2012  57   Male   16       Bachelor  51705           Average
+## 55139  55139 2012  42 Female   16       Bachelor 178712     Below Average
+## 55140  55140 2012  45 Female   20       Graduate 178712     Below Average
+## 55141  55141 2012  38   Male   14 Junior College 107240     Below Average
+## 55142  55142 2012  46   Male   20       Graduate 178712     Above Average
+```
+
+
