@@ -67,7 +67,6 @@ The box plots suggest a significant and positive relationship between higher edu
 
 ### Inference:
 
-
 The hypotheses for this study are as stated below:  
 **Null Hypothesis: The mean income is the same across all levels of education.**   
 **Alternative Hypothesis: At least one pair of mean incomes are different from each other.**
