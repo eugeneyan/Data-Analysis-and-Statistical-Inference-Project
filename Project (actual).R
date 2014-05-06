@@ -49,8 +49,6 @@ g + geom_density (alpha = 0.2) + labs(title = "Income Level distributions across
 g <- ggplot(gss2012, aes(coninc, fill = sex))
 g + geom_density (alpha = 0.2) + labs(title = "Income Level distributions across Gender") + labs(x = "Total Family Income", y = "Density") + scale_fill_manual( values = c("#0066FF","#FF0099"))
 
-?geom_density
-
 #boxplot of income vs degree
 par(mfrow = c(1,1))
 boxplot(gss2012$coninc ~ gss2012$degree, xlab = "Education Level", ylab = "Total Family Income", main = "Boxplot of Total Family Income by Education Level")
@@ -71,8 +69,12 @@ qqline(gss2012$coninc[gss2012$degree == "Graduate"])
 #anova of gss2012$coninc ~ gss2012$degree
 inference(y = gss2012$coninc, x = gss2012$degree, est = "mean", type = "ht", null = 0, alternative = "greater", method = "theoretical")
 
+inference(y = gss2012$coninc, x = gss2012$degree, est = "median", type = "ht", null = 0, alternative = "greater", method = "theoretical")
+
 #anova of gss2012$coninc ~ gss2012$incom16
 inference(y = gss2012$coninc, x = gss2012$incom16, est = "mean", type = "ht", null = 0, alternative = "greater", method = "theoretical")
+
+inference(y = gss2012$coninc, x = gss2012$incom16, est = "median", type = "ht", null = 0, alternative = "greater", method = "theoretical")
 
 #two sample t-test of gss2012$coninc ~ gss2012$sex
 inference(y = gss2012$coninc, x = gss2012$sex, est = "mean", type = "ht", null = 0, alternative = "twosided", method = "theoretical")
@@ -97,3 +99,5 @@ summary(model4)
 #current income ~ education level + income at age of 16 + sex
 model5 <- lm(gss2012$coninc ~ gss2012$degree + gss2012$incom16 + gss2012$sex)
 summary(model5)
+
+?aov
