@@ -1,0 +1,451 @@
+diff a/.Rhistory b/.Rhistory	(rejected hunks)
+@@ -1,224 +1,3 @@
+-hist(gss2012$educ[degree = "Bachelor",])
+-hist(gss2012$educ[, degree = "Bachelor"])
+-x <- gss2012[, degree = "Bachelor"]
+-x <- gss2012[, "Bachelor"]
+-x <- gss2012[degree = "Bachelor",]
+-?subset
+-x <- subset(gss2012, degree == "Bachelor")
+-x
+-Bach <- subset(gss2012, degree == "Bachelor")
+-High <- subset(gss2012, degree == "High School")
+-Lt_High <- subset(gss2012, degree == "Lt High School")
+-boxplot(gss2012$coninc ~ gss2012$degree)
+-Lt_High <- subset(gss2012, degree == "Lt High School")
+-High <- subset(gss2012, degree == "High School")
+-JC <- subset(gss2012, degree == "Junior College")
+-Bach <- subset(gss2012, degree == "Bachelor")
+-Grad <- subset(gss2012, degree == "Graduate")
+-View(Bach)
+-View(Grad)
+-View(High)
+-View(JC)
+-View(Lt_High)
+-par(mfrow <- c(5,1))
+-par(mfrow = c(5,1))
+-hist(Lt_High$coninc)
+-hist(High$coninc)
+-hist(JC$coninc)
+-hist(Bach$coninc)
+-hist(Grad$coninc)
+-par(mfrow = c(1,5))
+-hist(Lt_High$coninc)
+-hist(High$coninc)
+-hist(JC$coninc)
+-hist(Bach$coninc)
+-hist(Grad$coninc)
+-par(mfrow = c(5,1))
+-hist(Lt_High$coninc)
+-library(ggplot)
+-library(ggplot2)
+-carrots <- data.frame(length = rnorm(100000, 6, 2))
+-cukes <- data.frame(length = rnorm(50000, 7, 2.5))
+-View(carrots)
+-View(cukes)
+-carrots$veg <- 'carrot'
+-cukes$veg <- 'cuke'
+-View(carrots)
+-View(cukes)
+-vegLengths <- rbind(carrots, cukes)
+-View(vegLengths)
+-ggplot(vegLengths, aes(length, fill = veg)) + geom_density(alpha = 0.2)
+-?ggplot
+-carrots <- data.frame(length = rnorm(100000, 6, 2))
+-cukes <- data.frame(length = rnorm(50000, 7, 2.5))
+-#Now, combine your two dataframes into one.  First make a new column in each.
+-carrots$veg <- 'carrot'
+-cukes$veg <- 'cuke'
+-#and combine into your new data frame vegLengths
+-vegLengths <- rbind(carrots, cukes)
+-#now make your lovely plot
+-ggplot(vegLengths, aes(length, fill = veg)) + geom_density(alpha = 0.2)
+-library(ggplot2)
+-install.packages(ggplot2)
+-install.packages("ggplot2")
+-install.packages("ggplot2")
+-library(ggplot2)
+-ggplot(vegLengths, aes(length, fill = veg)) + geom_density(alpha = 0.2)
+-ggplot(gss2012$coninc, aes(length, fill = gss2012$degree)) + geom_density(alpha = 0.2)
+-?subset
+-gssdf <- data.frame(gss2012)
+-ggplot(gssdf$coninc, aes(length, fill = gssdf$degree)) + geom_density(alpha = 0.2)
+-str(gssdf)
+-str(gss2012)
+-ggplot(gss2012$coninc, aes(length, fill = gss2012$degree)) + geom_density(alpha = 0.2)
+-gss2012i <- subset(gss2012, select = c(coninc, degree))
+-View(gss2012i)
+-ggplot(gss2012i$coninc, aes(length, fill = gss2012i$degree)) + geom_density(alpha = 0.2)
+-str(gss2012i)
+-gss2012i <- structure(c(gss2012$coninc, gss2012$degree))
+-ggplot(gss2012i$coninc, aes(length, fill = gss2012i$degree)) + geom_density(alpha = 0.2)
+-gss2012i
+-?structure
+-gss2012i <- structure(c(gss2012$coninc, gss2012$degree), dim = 1974:2)
+-gss2012i <- structure(c(gss2012$coninc, gss2012$degree), dim = c(1974,2))
+-ggplot(gss2012i$coninc, aes(length, fill = gss2012i$degree)) + geom_density(alpha = 0.2)
+-gss2012i
+-ggplot(gss2012i$coninc, aes(length, fill = gss2012i$degree)) + geom_density(alpha = 0.2)
+-ggplot(gss2012i[1,], aes(length, fill = gss2012i[2,])) + geom_density(alpha = 0.2)
+-ggplot(gss2012i[,1], aes(length, fill = gss2012i[,2])) + geom_density(alpha = 0.2)
+-gss2012i <- structure(c(gss2012$coninc, gss2012$degree), dim = c(1974,2), dimnames = list(c(coninc, degree)))
+-gss2012i <- structure(c(gss2012$coninc, gss2012$degree), dim = c(1974,2), dimnames = c(coninc, degree)))
+-gss2012i <- structure(c(gss2012$coninc, gss2012$degree), dim = c(1974,2), dimnames = c(coninc, degree))
+-gss2012i <- structure(c(gss2012$coninc, gss2012$degree), dim = c(1974,2), dimnames = c("coninc", "degree"))
+-gss2012i <- structure(c(gss2012$coninc, gss2012$degree), dim = c(1974,2), dimnames = list(c("coninc", "degree")))
+-gss2012i <- structure(c(gss2012$coninc, gss2012$degree), dim = c(1974,2), dimnames = list(c("coninc") c("degree")))
+-gss2012i <- structure(c(gss2012$coninc, gss2012$degree), dim = c(1974,2), dimnames = list(c("coninc"), c("degree")))
+-ggplot(gss2012$coninc, aes(length, fill = gss2012$degree)) + geom_density(alpha = 0.2)
+-ggplot(vegLengths, aes(length, fill = veg)) + geom_density(alpha = 0.2)
+-str(vegLengths)
+-rm(carrots, cukes)
+-rm(vegLengths)
+-summary(model3)
+-plot(model1)
+-plot(gss2012$coninc ~ gss2012$degree)
+-str(gss)
+-summary(gss)
+-download.file(url = "http://bit.ly/dasi_project_template", destfile = "dasi_project_template.Rmd")
+-load(url("http://bit.ly/dasi_gss_data"))
+-gss2012 <- subset(gss, year == 2012, select = c(caseid, year, age, sex, educ, degree, coninc, incom16))
+-summary(gss2012)
+-boxplot(gss2012$coninc ~ gss2012$degree)
+-boxplot(gss2012$coninc ~ gss2012$degree, xlab = "education level", ylab = "total family income")
+-boxplot(gss2012$coninc ~ gss2012$degree, xlab = "Education Level", ylab = "Total Family Income", main = "Boxplot of Total Family Income by Education Level")
+-by(gss2012$coninc ~ gss2012$degree, summary)
+-by(gss2012$coninc, gss2012$degree, summary)
+-table(gss2012$coninc ~ gss2012$degree)
+-table(gss2012$coninc, gss2012$degree)
+-table(gss2012$degree, gss2012$coninc)
+-table(gss2012$degree)
+-prop.table(gss2012$degree)
+-prop.table(table(gss2012$degree))
+-table(gss$degree)
+-prop.table(table(gss2012$degree))
+-by(gss2012$coninc, gss2012$degree, summary)
+-table(gss2012$degree)
+-prop.table(table(gss2012$degree))
+-summary(gss2012$coninc)
+-plot(table(gss2012$degree))
+-barplot(table(gss2012$degree))
+-hist(gss2012$coninc)
+-?hist
+-hist(gss2012$coninc, breaks = 10000)
+-hist(gss2012$coninc, breaks = 50000)
+-hist(gss2012$coninc, breaks = 50000)
+-hist(gss2012$coninc, breaks = 100000)
+-hist(gss2012$coninc, breaks = 100000)
+-hist(gss2012$coninc)
+-hist(gss2012$coninc, breaks = 50000)
+-hist(gss2012$coninc, breaks = 1000)
+-hist(gss2012$coninc)
+-hist(gss2012$coninc, breaks = 1000)
+-?hist
+-plot(gss2012$coninc)
+-hist(gss2012$coninc)
+-hist(gss2012$coninc, breaks = 100)
+-hist(gss2012$coninc, breaks = 50)
+-hist(gss2012$coninc, breaks = 20)
+-hist(gss2012$coninc, breaks = 50)
+-hist(gss2012$coninc, breaks = 100)
+-hist(gss2012$coninc, breaks = 40)
+-hist(gss2012$coninc, breaks = 250)
+-hist(gss2012$coninc, breaks = 10)
+-ggplot(gss2012$coninc, aes(length, fill = gss2012$degree))
+-library(ggplot2)
+-ggplot(gss2012$coninc, aes(length, fill = gss2012$degree))
+-ggplot(gss2012$coninc, aes(length)
+-ggplot(gss2012$coninc, aes(length))
+-?hist
+-ggplot(gss2012$coninc, aes(length))
+-ggplot(gss2012$coninc)
+-?ggplot
+-ggplot(gss2012)
+-?ggplot
+-ggplot(coninc, data = gss2012)
+-qplot(coninc, data = gss2012)
+-ggplot(coninc, data = gss2012)
+-ggplot(gss2012, aes( , coninc))
+-ggplot(gss2012, aes( , coninc)) + geom_density (alpha = 0.2)
+-ggplot(gss2012, aes(coninc, )) + geom_density (alpha = 0.2)
+-ggplot(gss2012, aes(coninc, fill = degree)) + geom_density (alpha = 0.2)
+-ggplot(gss2012, aes(coninc, )) + geom_density (alpha = 0.2)
+-ggplot(gss2012, aes(coninc, fill = degree)) + geom_density (alpha = 0.2)
+-ggplot(gss2012, aes(coninc, fill = degree)) + geom_density (alpha = 0.2) + labs(title = "Income Level distributions across Education Levels")
+-ggplot(gss2012, aes(coninc, fill = degree)) + geom_density (alpha = 0.2) + labs(title = "Income Level distributions across Education Levels") + labs(x = "Total Family Income", y = "Frequency")
+-?hist
+-hist(gss2012$coninc, breaks = 10)
+-ggplot(gss2012, aes(coninc, fill = degree)) + geom_density (alpha = 0.2) + labs(title = "Income Level distributions across Education Levels") + labs(x = "Total Family Income", y = "Frequency")
+-hist(gss2012$coninc, breaks = 100)
+-hist(gss2012$coninc, breaks = 20)
+-hist(gss2012$coninc, breaks = 10)
+-hist(gss2012$coninc, breaks = 15)
+-ggplot(gss2012, aes(coninc)) + geom_point
+-ggplot(gss2012, aes(coninc)) + geom_line
+-ggplot(gss2012, aes(coninc)) + geom_density()
+-ggplot(gss2012, aes(coninc)) + geom_density() + labs(title = "Distribution of income in 2012") + labs(x = "Total Family Income", y = "Frequency")
+-g <- ggplot(gss2012, aes(coninc))
+-g + geom_density() + labs(title = "Distribution of income in 2012") + labs(x = "Total Family Income", y = "Frequency")
+-boxplot(gss2012$coninc ~ gss2012$degree, xlab = "Education Level", ylab = "Total Family Income", main = "Boxplot of Total Family Income by Education Level") + facet_grid(. ~ degree)
+-g + geom_density (alpha = 0.2) + labs(title = "Income Level distributions across Education Levels") + labs(x = "Total Family Income", y = "Frequency") + facet_grid(. ~ degree)
+-boxplot(gss2012$coninc ~ gss2012$degree, xlab = "Education Level", ylab = "Total Family Income", main = "Boxplot of Total Family Income by Education Level") + facet_grid(degree, .)
+-g + geom_density (alpha = 0.2) + labs(title = "Income Level distributions across Education Levels") + labs(x = "Total Family Income", y = "Frequency") + facet_grid(. ~ degree)
+-g + geom_density (alpha = 0.2) + labs(title = "Income Level distributions across Education Levels") + labs(x = "Total Family Income", y = "Frequency") + facet_grid(. ~ degree)
+-g + geom_density (alpha = 0.2) + labs(title = "Income Level distributions across Education Levels") + labs(x = "Total Family Income", y = "Frequency") + facet_grid(degree ~ .)
+-?subset
+-gss2012 <- subset(gss, year == 2012, is.na(degree), select = c(caseid, year, age, sex, educ, degree, coninc, incom16))
+-gss2012 <- subset(gss, year == 2012, is.na(degree), select = c(caseid, year, age, sex, educ, degree, coninc, incom16))
+-gss2012 <- subset(gss, year == 2012, !is.na(degree), select = c(caseid, year, age, sex, educ, degree, coninc, incom16))
+-gss2012 <- subset(gss, year == 2012, is.na(gss$degree), select = c(caseid, year, age, sex, educ, degree, coninc, incom16))
+-summary(gss2012)
+-summary(gss2012)
+-gss2012 <- subset(gss, year == 2012, !is.na(gss$degree), select = c(caseid, year, age, sex, educ, degree, coninc, incom16))
+-summary(gss2012)
+-gss2012 <- subset(gss, !is.na(gss2012$degree), year == 2012, select = c(caseid, year, age, sex, educ, degree, coninc, incom16))
+-gss2012 <- subset(gss, year == 2012, select = c(caseid, year, age, sex, educ, degree, coninc, incom16))
+-gss2012 <- subset(gss2012, is.na(degree))
+-summary(gss2012)
+-gss2012 <- subset(gss2012, !is.na(degree))
+-summary(gss2012)
+-gss2012a <- subset(gss, year == 2012, select = c(caseid, year, age, sex, educ, degree, coninc, incom16))
+-gss2012 <- subset(gss2012a, !is.na(degree))
+-summary(gss2012)
+-g <- ggplot(gss2012, aes(coninc))
+-g + geom_density() + labs(title = "Distribution of income in 2012") + labs(x = "Total Family Income", y = "Frequency")
+-g <- ggplot(gss2012, aes(coninc, fill = degree))
+-g + geom_density (alpha = 0.2) + labs(title = "Income Level distributions across Education Levels") + labs(x = "Total Family Income", y = "Frequency")
+-g + geom_density (alpha = 0.2) + labs(title = "Income Level distributions across Education Levels") + labs(x = "Total Family Income", y = "Frequency") + facet_grid(degree ~ .)
+-g <- ggplot(gss2012, aes(coninc))
+-g + geom_density() + labs(title = "Distribution of income in 2012") + labs(x = "Total Family Income", y = "Frequency")
+-g <- ggplot(gss2012, aes(coninc, fill = degree))
+-g + geom_density (alpha = 0.2) + labs(title = "Income Level distributions across Education Levels") + labs(x = "Total Family Income", y = "Frequency")
+-boxplot(gss2012$coninc ~ gss2012$degree, xlab = "Education Level", ylab = "Total Family Income", main = "Boxplot of Total Family Income by Education Level")
+-summary(gss2012$degree)
+ barplot(table(gss2012$degree))
+ prop.table(table(gss2012$degree))
+ boxplot(gss2012$coninc ~ gss2012$degree, xlab = "Education Level", ylab = "Total Family Income", main = "Boxplot of Total Family Income by Education Level")
+@@ -510,3 +289,224 @@
+ g + geom_density (alpha = 0.2) + labs(title = "Income Level distributions across Gender") + labs(x = "Total Family Income", y = "Density") + scale_fill_manual( values = c("#0066FF","#FF0099"))
+ ?by
+ ?prop.table
++ls()
++rm(ls())
++rm()
++?rm
++rm(list = ls())
++library(MASS)
++library(ISLR)
++install.packages("ISLR")
++library(ISLR)
++?ISLR
++names(Boston)
++?Boston
++View(Boston)
++plot(medv~lstat,Boston)
++fit1=lm(medv~lstat,data=Boston)
++fit1
++summary(fit1)
++abline(fit1,col="red")
++names(fit1)
++confint(fit1)
++predict(fit1,data.frame(lstat=c(5,10,15)),interval="confidence")
++?predict
++?confint
++?predict
++predict(fit1,interval="confidence")
++predict(fit1,data.frame(lstat=c(5,10,15)),interval="confidence")
++test <- data.frame(c(5, 10, 15))
++test
++test <- data.frame(lstat=c(5, 10, 15))
++test
++?data.frame
++test <- data.frame(5, 10, 15)
++test
++test <- data.frame(lstat = (5, 10, 15))
++test <- data.frame(lstat = c(5, 10, 15))
++test
++test <- data.frame(v=1:4,ch=c("a","B","c","d"),n=10)
++test
++predict(fit1,data.frame(lstat=c(5,10,15)),interval="confidence")
++fit2=lm(medv~lstat+age,data=Boston)
++summary(fit2)
++fit3=lm(medv~.,Boston)
++summary(fit3)
++summary(fit3)
++par(mfrow=c(2,2))
++plot(fit3)
++fit4=update(fit3,~.-age-indus)
++?update
++fit4=update(fit3,~.-age-indus)
++summary(fit4)
++fit5 <- update(fit4, ~.+age)
++summary(fit4)
++summary(fit5)
++fit4=update(fit3,~.-age-indus)
++fit5 <- update(fit4, ~.+age-crim)
++summary(fit5)
++fit5=lm(medv~lstat*age,Boston)
++summary(fit5)
++?lm
++fit6=lm(medv~lstat +(lstat^2),Boston); summary(fit6)
++fit6=lm(medv~lstat +(lstat^2),Boston); summary(fit6)
++fit6=lm(medv~lstat +I(lstat^2),Boston); summary(fit6)
++fit6=lm(medv~lstat +T(lstat^2),Boston); summary(fit6)
++fit6=lm(medv~lstat +I(lstat^2),Boston); summary(fit6)
++?I
++fit7=lm(medv~poly(lstat,4))
++summary(fit7)
++attach(Boston)
++fit7=lm(medv~poly(lstat,4))
++summary(fit7)
++points(lstat,fitted(fit7),col="blue",pch=20)
++fix(fit1)
++plot(medv~lstat)
++par(mfrow=c(1,1))
++plot(medv~lstat)
++points(lstat,fitted(fit6),col="red",pch=20)
++fit7=lm(medv~poly(lstat,4))
++summary(fit7)
++points(lstat,fitted(fit7),col="blue",pch=20)
++fix(Carseats)
++fit1=lm(Sales~.+Income:Advertising+Age:Price,Carseats)
++summary(fit1)
++fit1=lm(Sales~.+Income*Advertising+Age*Price,Carseats)
++summary(fit1)
++?function
++()
++)
++library(ISLR)
++library(MASS)
++plot(medv~lstat,Boston)
++fit1=lm(medv~lstat,data=Boston)
++fit1
++summary(fit1)
++abline(fit1,col="red")
++names(fit1)
++confint(fit1)
++predict(fit1,data.frame(lstat=c(5,10,15)),interval="confidence")
++### Multiple linear regression
++fit2=lm(medv~lstat+age,data=Boston)
++summary(fit2)
++fit3=lm(medv~.,Boston)
++summary(fit3)
++par(mfrow=c(2,2))
++plot(fit3)
++fit4=update(fit3,~.-age-indus)
++summary(fit4)
++### Nonlinear terms and Interactions
++fit5=lm(medv~lstat*age,Boston)
++summary(fit5)
++?complete.cases
++?source
++?dget
++?write.table
++getwd
++getwd()
++read.csv("hw1_data")
++read.csv("hw1_data.csv")
++hw1 <- read.csv("hw1_data.csv")
++x <- 4
++class(x)
++x <- c(4, TRUE)
++class(x)
++x <- c(1,3, 5)
++y <- c(3, 2, 10)
++cbind(x, y)
++x[[2]]
++x <- list(2, "a", "b", TRUE)
++x[[2]]
++class(x[[2]])
++class(x[2])
++x[2])
++x[2]
++x <- 1:4
++y <- 2
++x + y
++x <- c(17, 14, 4, 5, 13, 12, 10)
++x[x > 10] <- 4
++x
++names(hw1)
++head(hw1)
++tail(hw1)
++hw1[47,]
++hw1$ozone[47,]
++hw1$Ozone[47,]
++hw1[47,]$Ozone
++is.na(hw1[47,]$Ozone)
++is.na(hw1$Ozone)
++check <- is.na(hw1$Ozone)
++table(check)
++summary(hw1)
++mean(hw1$Ozone[!check])
++summary(hw1[!check])
++summary(hw1[!check,])
++sub <- hw1[Ozone > 31,]
++sub <- hw1[hw1$Ozone > 31,]
++sub <- hw1[hw1$Ozone > 31,][hw1$Temp > 90, ]
++summary(sub)
++?subset
++sub2 <- (hw1, Temp > 90 & Ozone > 31)
++sub2 <- subset(hw1, Temp > 90 & Ozone > 31)
++summary(sub2)
++summary(hw1[, Month == 6])
++hw1[, Month = 6]
++hw1[, Month == 6]
++hw1[, hw1$Month == 6]
++hw1[, hw1$Month = 6]
++View(hw1)
++hw1[, hw1$Month == 6]
++hw1[, hw1$Month == "6"]
++hw1[ , hw1$Month == "6"]
++hw1[ ,hw1$Month == "6"]
++hw1[ ,Month == "6"]
++hw1[ ,hw1$Month == "6"]
++hw1[hw1$Month == "6"]
++hw1[hw1$Month == "6", ]
++summary(hw1[hw1$Month == "6", ])
++summary(hw1[hw1$Month == "5", ])
++install.packages("swirl")
++library(swirl)
++ls()
++rm(list=ls())
++swirl()
++5 + 7
++x <- 5 + 7
++x
++y <- x - 3
++y
++z <- c(1.1, 9, 3.14)
++?c
++z
++c(z, 555, z)
++z * 2 + 100
++mySqrt <- sqrt(z-1)
++mySqrt
++myDiv <- z/mySqrt
++myDiv
++C(1, 3, 3, 4) + c(0, 10)
++C(1, 2, 3, 4) + c(0, 10)
++C(1, 2, 3, 4) + c(0, 10)
++C(1, 2, 3, 4) + (0, 10)
++C(1, 2, 3, 4) + c(0, 10)
++help.start()
++info()
++c(1, 2, 3, 4) + c(0, 10)
++c(1, 2, 3, 4) + c(0, 10, 100)
++1:20
++pi:10
++15:1
++?`:`
++seq(1,20)
++seq(0, 10, by=0.5)
++seq(5, 10, length = 30)
++my_seq <- seq(5, 10, length=30)
++length(my_seq)
++1:length(my_seq)
++seq(along = my_seq)
++seq_along(my_seq)
++rep(0, times = 40)
++?seq_along
++rep(c(0,1,2), times = 10)
++rep(c(0, 1, 2), each = 10)
