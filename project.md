@@ -1,6 +1,9 @@
 ### What is the relationship between education level and income?
 
 
+```
+## Error: there is no package called 'ggplot2'
+```
 
 
 ### Introduction:
@@ -51,7 +54,13 @@ A majority of the US population has an education level of high school level and 
 ##     383   16300   34500   48800   63200  179000
 ```
 
-<img src="figure/unnamed-chunk-3.png" title="plot of chunk unnamed-chunk-3" alt="plot of chunk unnamed-chunk-3" style="display: block; margin: auto;" />
+```
+## Error: could not find function "ggplot"
+```
+
+```
+## Error: object 'g' not found
+```
 
 
 The median income in 2012 is $34,450, with a mean of $48,800, and range of $383 - $179,000.  Income distribution is bimodal and right skewed, with a peak at approximately $15,000 and another at the extreme right tail, with a gap between $125,000 and $160,000. 
@@ -59,7 +68,14 @@ The median income in 2012 is $34,450, with a mean of $48,800, and range of $383 
 #### Boxplot and Overlapping Density Distribution of Current Income across Education
 <img src="figure/unnamed-chunk-4.png" title="plot of chunk unnamed-chunk-4" alt="plot of chunk unnamed-chunk-4" style="display: block; margin: auto;" />
 
-<img src="figure/unnamed-chunk-5.png" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" style="display: block; margin: auto;" />
+
+```
+## Error: could not find function "ggplot"
+```
+
+```
+## Error: object 'g' not found
+```
 
 
 The box plots suggest a significant and positive relationship between higher education and income.  The overlapping distribution plots further hint at the strong relationship between education and income, warranting a deeper investigation of the research question.
@@ -87,6 +103,15 @@ inference(y = gss2012$coninc, x = gss2012$degree, est = "mean", type = "ht",
 ```
 
 ```
+## 
+## The downloaded binary packages are in
+## 	/var/folders/74/9rf_lkw15kl6zq06y6xf48rw0000gn/T//Rtmp1UAbkG/downloaded_packages
+## 
+## The downloaded binary packages are in
+## 	/var/folders/74/9rf_lkw15kl6zq06y6xf48rw0000gn/T//Rtmp1UAbkG/downloaded_packages
+## 
+## The downloaded binary packages are in
+## 	/var/folders/74/9rf_lkw15kl6zq06y6xf48rw0000gn/T//Rtmp1UAbkG/downloaded_packages
 ## Response variable: numerical, Explanatory variable: categorical
 ## ANOVA
 ## Summary statistics:
@@ -175,7 +200,14 @@ A multiple regression analysis has been done with (i) education, (ii) age, (iii)
 It seems that while education is able to lift millions out of poverty, it has not been able to completely level the playing field for those coming from a poor family background and women.  It will be interesting to observe how massive online open courses ("MOOCs") will have an impact on this.  An overlapping plot of income across gender and a summary of the regression analysis is appended below.
 
 #### Overlapping Density Distribution of Current Income across Gender, and multiple regression model of Education, Family Income, and Gender on Current Income
-<img src="figure/unnamed-chunk-10.png" title="plot of chunk unnamed-chunk-10" alt="plot of chunk unnamed-chunk-10" style="display: block; margin: auto;" />
+
+```
+## Error: could not find function "ggplot"
+```
+
+```
+## Error: object 'g' not found
+```
 
 ```
 ## 
